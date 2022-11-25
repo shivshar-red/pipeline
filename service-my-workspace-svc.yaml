@@ -1,0 +1,43 @@
+﻿kind: Service
+apiVersion: v1
+metadata:
+  name: my-workspace-svc
+  namespace: my-workspace
+  selfLink: /api/v1/namespaces/my-workspace/services/my-workspace-svc
+  uid: 72274477-12a8-4cba-a298-c196cac0a47e
+  resourceVersion: '1704225'
+  creationTimestamp: '2022-11-23T08:27:48Z'
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2022-11-23T08:27:48Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          'f:ports':
+            .: {}
+            'k:{"port":8080,"protocol":"TCP"}':
+              .: {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+          'f:selector':
+            .: {}
+            'f:app': {}
+          'f:sessionAffinity': {}
+          'f:type': {}
+spec:
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8988
+  selector:
+    app: my-workspace
+  clusterIP: 172.30.197.13
+  clusterIPs:
+    - 172.30.197.13
+  type: ClusterIP
+  sessionAffinity: None
+status:
+  loadBalancer: {}

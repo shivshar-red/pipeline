@@ -1,0 +1,31 @@
+﻿kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: example
+  namespace: my-workspace
+  uid: 9cd22b96-d825-4d73-b183-fe1cf6a5b597
+  resourceVersion: '1692513'
+  generation: 1
+  creationTimestamp: '2022-11-23T07:51:51Z'
+spec:
+  lookupPolicy:
+    local: false
+status:
+  dockerImageRepository: 'image-registry.openshift-image-registry.svc:5000/my-workspace/example'
+  publicDockerImageRepository: >-
+    default-route-openshift-image-registry.apps.cluster-lb4742.lb4742.example.opentlc.com/my-workspace/example
+  tags:
+    - tag: latest
+      items:
+        - created: '2022-11-23T08:21:08Z'
+          dockerImageReference: >-
+            image-registry.openshift-image-registry.svc:5000/my-workspace/example@sha256:fdbcfebbb8fadfc2541e3fdbb92a8687365d66d9ca1195160918c253a3b57e3f
+          image: >-
+            sha256:fdbcfebbb8fadfc2541e3fdbb92a8687365d66d9ca1195160918c253a3b57e3f
+          generation: 1
+        - created: '2022-11-23T08:02:28Z'
+          dockerImageReference: >-
+            image-registry.openshift-image-registry.svc:5000/my-workspace/example@sha256:bc3b3a6ed48209ddb79ff2112e2390a716c0d562fdf8833463fac94c04e80198
+          image: >-
+            sha256:bc3b3a6ed48209ddb79ff2112e2390a716c0d562fdf8833463fac94c04e80198
+          generation: 1
